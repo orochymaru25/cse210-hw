@@ -112,7 +112,6 @@ class Program
         // Console.WriteLine($"Squared: {squared}");
         // Display it all three
         Console.WriteLine($"{name}, the square of your number is {squared}");
-        
     }
 
     // youtube example1
