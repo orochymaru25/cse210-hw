@@ -135,6 +135,7 @@ class Program
                 if (prompt._toDo > 5) 
                 {
                     Console.WriteLine($"Sorry {prompt._toDo} is not on the choices.");
+                    break;
                 }
             }
         
