@@ -5,8 +5,8 @@ using System.IO;
 public class Journal
 {
     // Variables
-    public List<Entry> _journal = new List<Entry>();
-    public string _fileName = "";
+    public List<Entry> _journal = new List<Entry>(); // List to hold all the journal entries (Write, Load, and Save).
+    public string _fileName = ""; // Variable to hold the filename in saving and loading a file.
 
     // Method to display the _journal
     public void DisplayJournal()
@@ -36,23 +36,29 @@ public class Journal
     // Method to Load a Text File and save to _journal list.
     public void SaveLoadedFile()
     {
-        _journal.Clear();
-        string[] lines = System.IO.File.ReadAllLines(_fileName);
-        string date = "";
+        _journal.Clear(); // Clear the _journal list
+  
+        string[] lines = System.IO.File.ReadAllLines(_fileName); // Read all line in the text file
+
+        // String variables to prepare the date and time before attempting to add list to _journal.
+        string date = "";    
         string prompt = "";
-        int stringCount = 0;
-        foreach (string line in lines)
+
+        int stringCount = 0; // Code to know what string is being used.
+        foreach (string line in lines) // To loop through each line of text in a text file.
         {
+            // if else statement to help handling the split method correctly.
             if (stringCount == 0)
             {
-                string[] parts = line.Split(" ", 5);
+                string[] parts = line.Split(" ", 5); // Splitting the string line to an array of strings.
 
-                int indexCount = 0;
-                foreach (string indexFinder in parts)
+                int indexCount = 0; // Code to help what index is being used.
+                foreach (string indexFinder in parts) // Loop through an array of strings.
                 {
+                    // Using the if state to catch the data and prompt, then add the value later _journal.
                     if (indexCount == 1)
                     {
-                        date = indexFinder;
+                        date = indexFinder; 
                     }
                     if (indexCount == 4)
                     {
@@ -64,6 +70,7 @@ public class Journal
             }
             if (stringCount == 1)
             {
+                // code to add new list to _journal the values of date, prompt and entry is complete.
                 _journal.Add(new Entry 
                 {
                     _currentDate = date,
