@@ -2,6 +2,7 @@ using System;
 
 public class PromptGenerator
 {
+    // Variables
     public List<string> _menu = new List<string>();
     public List<string> _randomQuestions = new List<string>();
     public string _question {get; set;}
@@ -12,6 +13,7 @@ public class PromptGenerator
         _toDo = int.Parse(Console.ReadLine());
     }
 
+    // Method to display _menu.
     public void DisplayMenu()
     {
         int i = 1;

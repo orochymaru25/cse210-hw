@@ -2,6 +2,7 @@ using System;
 
 public class Entry
 {
+    // Class properties.
     public string _journalEntry {get; set;}
     public string _currentDate {get; set;}
     public string _randomPrompt {get; set;}
