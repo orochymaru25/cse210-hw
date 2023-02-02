@@ -43,11 +43,16 @@ class Program
         //Foreach Loops
         //C# contains a foreach loop that is similar to a standard for loop in Python. It is important to remember that the iterator variable must have its type defined, just like when declaring any other variable:
 
-        // List<String> colors = new List<String>();
-        // colors.Add("red");
-        // colors.Add("blue");
-        // colors.Add("green");
-        // colors.Add("yellow");
+        List<String> colors = new List<String>();
+        colors.Add("red");
+        colors.Add("blue");
+        colors.Add("green");
+        colors.Add("yellow");
+    
+        Console.WriteLine("asdfasdfasdfasdfsdfasdf");
+
+        Random randomm = new Random();
+        Console.WriteLine(colors[randomm.Next(0, colors.Count)]);
 
         // foreach (String item in colors)
         // {
