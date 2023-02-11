@@ -16,7 +16,6 @@ class Program
             // Code to get current date.
             DateTime theCurrentTime = DateTime.Now;
 
-
             // Adding property values in PromptGenerator class
             prompt._menu.Add("Please select one of the following choices");
             prompt._menu.Add("1. Write");
@@ -35,9 +34,6 @@ class Program
             prompt._randomQuestions.Add("If you could take any college course you wanted, what would you take?");
             prompt._randomQuestions.Add("Rewrite a conversation you have had in the way you wish it had gone.");
             prompt._randomQuestions.Add("What would you do if you found a puppy in the street?");
-
-
-            
 
             while (prompt._toDo != 5)
             {
